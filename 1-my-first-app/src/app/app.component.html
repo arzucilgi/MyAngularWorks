@@ -1,0 +1,23 @@
+
+<!--değişken tanımlaması yaparak bu değişkeni burda kullandım.-->
+<h1>App Component. {{helloWorld}}</h1>
+<!--eğer normal parantez kullanıyorsam burda event kullandığımı anlarım eğer köşeli parantez kullanıyorsam javascript tarafında 
+tanımlanan değişkenle birbirine bağlayabilirim.-->
+<!-- EVENTİ BAĞLAMA -->
+<button (click)="clickMe()">clickMe Metodunu çağır.</button>
+<input type="text" (keyup)="changeHelloWorldVariable($event)">
+<!-- DEĞİŞKENİ BAĞLAMA -->
+
+<p class="{{pStyle}}">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+<!-- [class]="pStyle" class="{{pStyle}}" ikisi de aynı işi yapar 
+ -hiç bu şekilde değişken ismiyle uğraşmadan da normal class tanımı 
+ -eğer bir  fonsiyon sonucunda string döndürüyorsa [class]="pFonksiyonIsmi()" şeklinde de bir fonkdiyon kullanabilirsin   -->
+
+<!-- FormsModule ile two data bindings kullanımı -->
+
+<input type="text" [(ngModel)]="helloWorld">
+
+<!--farklı componentleri kullandım-->
+<app-home></app-home>
+<app-about></app-about>
+<app-contact></app-contact>
