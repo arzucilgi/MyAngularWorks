@@ -1,0 +1,6 @@
+<h1>Example Component</h1>
+<!-- bu şekilde gelen veriyi input içerisine koydul. ngModel sayesinde bunda yapılan değişiklik buradaki değişkeni de değiştirdi
+ ama orjinal appComponneti içerisinde bulunan veriyi değiştirmedi. -->
+<p>Benim adım {{nameGelen}}</p> 
+<input [(ngModel)]="nameGelen">
+<button  (click)="changeName()">İsmi değiştir</button>
